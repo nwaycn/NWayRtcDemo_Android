@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:btn="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/video_screen"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="88dp"
+        android:layout_height="110dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/llLocalView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/boader"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/llRRemoteView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/boader"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/networkDebugView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:paddingBottom="100dp" >
+
+            <TextView
+                android:id="@+id/encoder_stat_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#C000FF00"
+                android:textSize="12dp"
+                android:layout_margin="8dp"/>
+
+            <TableLayout
+                android:id="@+id/hudview_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/hud_stat_bwe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.4"
+                        android:padding="2dip"
+                        android:background="@android:color/white"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/hud_stat_connection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.4"
+                        android:padding="2dip"
+                        android:background="@android:color/white"
+                        android:textColor="@android:color/black" />
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/hud_stat_video_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.4"
+                        android:padding="2dip"
+                        android:background="@android:color/white"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/hud_stat_video_recv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dip"
+                        android:alpha="0.4"
+                        android:background="@android:color/white"
+                        android:textColor="@android:color/black" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/networkQualityBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:background="@drawable/bg_network_quality_background"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/iv_netquality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/network_smooth"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_netquality"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:focusable="false"
+                    android:visibility="invisible"
+                    android:hint="@string/call_network_quality_smooth"
+                    android:textColor="#EEEEEE"
+                    android:textSize="17dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" >
+
+        <Button
+            android:id="@+id/mute"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textColor="#ffffff"
+            android:text="@string/audio_mute">
+        </Button>
+        <Button
+            android:id="@+id/Speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textColor="#ffffff"
+            android:text="@string/audio_speaker">
+        </Button>
+        <Button
+            android:id="@+id/hangup"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="5"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:textColor="#ffffff"
+            android:text="@string/video_hungup" >
+        </Button>
+
+        <Button
+            android:id="@+id/swap_cam"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:textColor="#ffffff"
+            android:text="@string/swap_cam">
+        </Button>
+    </LinearLayout>
+</RelativeLayout>

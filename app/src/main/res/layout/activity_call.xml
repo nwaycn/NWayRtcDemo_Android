@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/layout_video_call"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+    <!-- IMPORTANT: seems that visibility="gone" below fixes the flashing issue somehow (restcomm-android-sdk #354) -->
+    <FrameLayout
+        android:id="@+id/remote_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <!-- IMPORTANT: seems that visibility="gone" below fixes the flashing issue somehow (restcomm-android-sdk #354) -->
+    <FrameLayout
+        android:id="@+id/local_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/label_call"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="212dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center_horizontal"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/label_status"
+        android:layout_below="@+id/label_call"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:id="@+id/label_timer"
+        android:layout_below="@+id/label_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/disconnect_call"
+        android:id="@+id/button_hangup"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/answer_call_video"
+        android:id="@+id/button_answer"
+        android:layout_alignBottom="@+id/button_hangup"
+        android:layout_toLeftOf="@+id/button_hangup"
+        android:layout_marginRight="58dp" />
+
+    <!--<ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_answer_audio"
+        android:background="@android:color/transparent"
+        android:src="@drawable/answer_call_audio"
+        android:layout_alignBottom="@+id/button_hangup"
+        android:layout_toLeftOf="@+id/button_hangup"
+        android:layout_marginLeft="58dp" />-->
+
+
+    <!--<ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_keypad"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@android:color/transparent"
+        android:src="@drawable/call_dialpad"
+        android:layout_above="@+id/button_hangup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />-->
+
+    <ImageButton
+        android:id="@+id/button_mute_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_hangup"
+        android:layout_marginRight="58dp"
+        android:layout_toLeftOf="@+id/button_hangup"
+        android:background="@android:color/transparent"
+        android:src="@drawable/video_unmuted" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_mute_audio"
+        android:background="@android:color/transparent"
+        android:src="@drawable/audio_unmuted"
+        android:layout_alignBottom="@+id/button_hangup"
+        android:layout_toLeftOf="@+id/button_hangup"
+        android:layout_marginLeft="58dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_unlock"
+        android:background="@android:color/transparent"
+        android:src="@drawable/jiesuopressed"
+        android:layout_alignBottom="@+id/button_hangup"
+        android:layout_toRightOf="@+id/button_hangup"
+        android:layout_marginLeft="58dp" />
+
+    <!-- placeholder for keypad fragment -->
+    <!--<FrameLayout
+        android:id="@+id/keypad_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </FrameLayout>-->
+
+</RelativeLayout>
