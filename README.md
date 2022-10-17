@@ -8,8 +8,8 @@
 
 3 和h5的sip.js等web版sip客户端，IOS客户端无缝对接
 
-https://github.com/nwayrtc/nwayrtc-IOS
+https://github.com/nwaycn/nwayrtc-IOS
 
-https://github.com/nwayrtc/nwayrtc-Web
+https://github.com/nwaycn/nwayrtc-Web
 
-QQ群：220927853
+mobile(wechat) +8618621575908
